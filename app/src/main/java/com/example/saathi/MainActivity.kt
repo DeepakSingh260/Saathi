@@ -17,9 +17,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val gridView = findViewById<GridView>(R.id.main_grid_view)
-        val itemsList: List<items> = ArrayList()
+        val itemsList: MutableList<items> = ArrayList()
+        itemsList.add(items(R.drawable.hostel, "Hostel/PG"))
+        itemsList.add(items(R.drawable.food, "Mess Food"))
+        itemsList.add(items(R.drawable.books, "Rent Book"))
+        itemsList.add(items(R.drawable.person, "Profile"))
         val customAdapter = CustomAdapter(this, R.layout.grid_view_card, itemsList)
         gridView.adapter = customAdapter
+
+
     }
 
 
