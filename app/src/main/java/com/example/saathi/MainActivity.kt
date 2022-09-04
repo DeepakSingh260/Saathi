@@ -1,6 +1,7 @@
 package com.example.saathi
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -32,13 +33,14 @@ class MainActivity : AppCompatActivity() {
 }
 
 class CustomAdapter(context: Context, resource: Int, objects: List<items>) : ArrayAdapter<items?>(context, resource, objects) {
-
+    private var page_context:Context
     private var items_list: List<items>
     private var custom_layout_id: Int
 
     init {
         items_list = objects
         custom_layout_id = resource
+        page_context = context
     }
 
     override fun getCount(): Int {
@@ -61,6 +63,14 @@ class CustomAdapter(context: Context, resource: Int, objects: List<items>) : Arr
         val item: items = items_list[position]
         imageView.setImageResource(item.getImage_id())
         textView.setText(item.getText())
+        if(item.getText()=="Rent Book"){
+            v.setOnClickListener(object : View.OnClickListener {
+                override fun onClick(p0: View?) {
+                    val intent = Intent(page_context ,Book_Page::class.java )
+                    page_context.startActivity(intent)
+                }
+            })
+        }
         return v
     }
 }
