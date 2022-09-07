@@ -10,4 +10,13 @@
     <string name="if_new">If New Sign In</string>
     <string name="tag_line">What Can We Do For You Today.</string>
     <string name="book_line">Rent A Book Today</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="business_name">Business Name</string>
+    <string name="address">Address</string>
+    <string name="upload_document">Upload Document</string>
+    <string name="set_profile">Set Up Profile</string>
+    <string name="adhaar">Adhaar Card</string>
+    <string name="upload">Upload</string>
+    <string name="gst_number">GST Number</string>
+    <string name="update">Update</string>
 </resources>

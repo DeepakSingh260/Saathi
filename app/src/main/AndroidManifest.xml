@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Saathi"
         tools:targetApi="31">
         <activity
+            android:name=".business_profile"
+            android:exported="false" />
+        <activity
             android:name=".Book_Page"
             android:exported="false" />
         <activity
